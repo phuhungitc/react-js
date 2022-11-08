@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 
+const gift = [
+  'CPU i9',
+  'RAM 32GB RGB',
+  'RGB Keyboard'
+]
 function App() {
+  const [award, setAward] = useState()
+  const handleGetAward = () => {
+    const index = Math.floor(Math.random() * gift.length)
+    setAward(gift[index])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{award||'Chưa có phần thưởng'}</h1>
+      <button onClick={handleGetAward}>Lấy thưởng</button>
     </div>
   );
 }
