@@ -1,0 +1,58 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Javascript</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="assets/css/normalize.min.css"> -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        function Header() {
+            return ( 
+                <div className="header">Header</div>
+            );
+        }
+        class Content extends React.Component {
+            render() {
+                return ( 
+                    <div className="content">Content</div>
+                )
+            }
+        }
+        function Footer() {
+            return ( 
+                <div className="header">Header</div>
+            );
+        }
+        
+        
+        const app = (
+            <div className="wrapper">
+                <Header></Header>
+                <Content></Content>
+                <Footer></Footer>
+            </div>
+        )
+        ReactDOM.createRoot(document.getElementById('root')).render(app)
+    </script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div id="root"></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</body>
+</html>
